@@ -18,8 +18,8 @@ This project provides:
 
 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/VirtualMemoryOptimization.git
-cd VirtualMemoryOptimization
+git clone https://github.com/yourusername/VMO.git
+cd VMO
 ```
 
 2. Install dependencies:
@@ -80,6 +80,3 @@ If you encounter issues with the matplotlib version:
 - Check that all dependencies are installed correctly
 - Ensure you have appropriate permissions to monitor system processes
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
