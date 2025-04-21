@@ -78,5 +78,5 @@ The simple version provides all the same features but uses a text-based output i
 If you encounter issues with the matplotlib version:
 - Try running the web-based version (`streamlit run original_web_app.py`)
 - Check that all dependencies are installed correctly
-- Ensure you have appropriate permissions to monitor system processes
+- Ensure you have appropriate permissions to monitor system processes.
 
