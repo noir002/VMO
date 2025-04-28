@@ -1,3 +1,5 @@
+#simple v1.0.0 for checking if all the dependencies are working properly
+
 import streamlit as st
 import numpy as np
 import plotly.graph_objects as go
