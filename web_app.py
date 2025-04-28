@@ -8,7 +8,7 @@ import psutil
 import random
 import time
 
-# Set page config
+
 st.set_page_config(
     page_title="Virtual Memory Simulator",
     page_icon="🧠",
@@ -285,7 +285,7 @@ def optimal_replacement(page_sequence, frame_count):
 
 # Function to create memory state visualization
 def create_memory_state_fig(history, frame_count):
-    # Extract memory states and create a 2D array
+   
     states = np.array([list(h['state']) for h in history])
     
     # Create a dataframe for visualization
@@ -338,7 +338,7 @@ def create_memory_state_fig(history, frame_count):
     
     return fig
 
-# Function to create page fault visualization
+
 def create_page_fault_fig(history):
     df = pd.DataFrame(history)
     df['step'] = df.index
