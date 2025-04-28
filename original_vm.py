@@ -33,7 +33,7 @@ class PageReplacementAlgorithm:
                     del access_history[lru_page]
                 self.memory[idx] = page
             
-            # Update access history
+           
             if page in access_history:
                 del access_history[page]
             access_history[page] = True
@@ -84,7 +84,7 @@ class MemorySimulator:
         self.root.title("Virtual Memory Simulator")
         self.root.geometry("1000x700")
         
-        # Configure the style for a futuristic green on black theme
+       
         self.configure_style()
         
         # Create main frame
