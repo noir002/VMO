@@ -25,7 +25,7 @@ class PageReplacementAlgorithm:
             if page not in self.memory:
                 self.page_faults += 1
                 if -1 in self.memory:
-                    # Empty frame available
+                 
                     idx = self.memory.index(-1)
                 else:
                     # Find least recently used
@@ -86,10 +86,10 @@ class SimpleMemorySimulator:
         self.root.geometry("900x700")
         
         # Neo-inspired color scheme
-        self.BACKGROUND_COLOR = '#0c1021'  # Dark blue background
-        self.ACCENT_COLOR = '#00ffff'      # Cyan accent
-        self.SECONDARY_COLOR = '#007acc'   # Lighter blue
-        self.TEXT_COLOR = '#ffffff'        # White text
+        self.BACKGROUND_COLOR = '#0c1021'  
+        self.ACCENT_COLOR = '#00ffff'      
+        self.SECONDARY_COLOR = '#007acc' 
+        self.TEXT_COLOR = '#ffffff'       
         
         self.root.configure(bg=self.BACKGROUND_COLOR)
         
@@ -111,7 +111,7 @@ class SimpleMemorySimulator:
         style.configure('TButton', background=self.SECONDARY_COLOR)
         style.configure('TRadiobutton', background=self.BACKGROUND_COLOR, foreground=self.TEXT_COLOR)
         
-        # Create main container
+       
         main_frame = ttk.Frame(root)
         main_frame.pack(fill=tk.BOTH, expand=True, padx=20, pady=20)
         
