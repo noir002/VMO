@@ -174,7 +174,7 @@ class SimpleMemorySimulator:
                  text="Run Simulation", 
                  command=self.run_simulation).pack(anchor=tk.CENTER, pady=10)
         
-        # Results area
+       
         results_frame = ttk.Frame(main_frame)
         results_frame.pack(fill=tk.BOTH, expand=True, pady=10)
         
@@ -247,7 +247,7 @@ class SimpleMemorySimulator:
             messagebox.showerror("Error", f"Failed to get process list: {str(e)}")
             
     def on_process_selected(self, event):
-        """Handle process selection"""
+        
         selection = self.selected_process.get()
         if selection:
             try:
@@ -262,7 +262,7 @@ class SimpleMemorySimulator:
     def get_process_memory_pages(self, pid):
         """Generate simulated memory page accesses based on actual process memory info"""
         try:
-            # Get memory stats for the process using ps
+     
             result = subprocess.run(
                 ['ps', '-o', 'pid,rss,vsz,command', '-p', pid], 
                 capture_output=True, 
@@ -272,7 +272,7 @@ class SimpleMemorySimulator:
             if result.returncode != 0:
                 raise ValueError(f"Failed to get info for PID {pid}")
                 
-            # Parse output, skip header
+           
             lines = result.stdout.strip().split('\n')
             if len(lines) < 2:
                 raise ValueError(f"No process found with PID {pid}")
