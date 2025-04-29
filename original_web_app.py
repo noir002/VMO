@@ -7,7 +7,7 @@ import psutil
 import plotly.graph_objects as go
 import plotly.express as px
 
-# Set page config
+
 st.set_page_config(
     page_title="Virtual Memory Simulator",
     page_icon="��",
@@ -15,7 +15,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for better UI
+
 st.markdown("""
 <style>
     /* Main theme colors */
@@ -254,16 +254,16 @@ def lru_replacement(page_sequence, frame_count):
             page_faults += 1
             is_fault = True
             if -1 in memory:
-                # Empty frame available
+               
                 idx = memory.index(-1)
             else:
-                # Find least recently used
+               
                 lru_page = next(iter(access_history))
                 idx = memory.index(lru_page)
                 del access_history[lru_page]
             memory[idx] = page
         
-        # Update access history
+      
         if page in access_history:
             del access_history[page]
         access_history[page] = True
@@ -277,7 +277,7 @@ def lru_replacement(page_sequence, frame_count):
     
     return history, page_faults
 
-# Function to run Optimal algorithm
+
 def optimal_replacement(page_sequence, frame_count):
     memory = [-1] * frame_count
     page_faults = 0
